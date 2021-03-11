@@ -12,12 +12,13 @@
 </head>
 
 <body>
-  
-  <iframe src="https://heeropunjabi.github.io/Happy-Birthday-2021/img/tune.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-  
+  <audio   src="img/tune.mp3"  loop preload="auto" id='audio' >
+  </audio>
   
   <div class="container">
+   
     <div class="one">
+     
       <h1 class="one">Hey
         <span id="name">Aru</span>
       </h1>
@@ -125,10 +126,34 @@
       <p id="replay">Or click me, if you want to watch it again.</p>
       <p class="last-smile">:)</p>
     </div>
+   
   </div>
+  <button onclick="play()" style="
+  z-index: 100000000;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 45%;
+  padding: 5px;
+">Play</button>
+<button onclick="stop()" style="
+z-index: 100000000;
+float: left;
+position: absolute;
+top: 0;
+left: 50%;
+padding: 5px;
+">Stop</button>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script type="application/javascript" src="script/main.js"></script>
-
+<script>
+  function play() {
+    document.getElementById("audio").play();
+  }
+  function stop() {
+    document.getElementById("audio").pause();
+  }
+  </script>
 </html>
